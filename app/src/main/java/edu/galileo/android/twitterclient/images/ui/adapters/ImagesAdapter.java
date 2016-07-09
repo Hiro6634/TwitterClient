@@ -56,7 +56,7 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
 
     class ViewHolder extends RecyclerView.ViewHolder{
         @Bind(R.id.txtTweet)    TextView txtTweet;
-        @Bind(R.id.imageView)   ImageView imgMedia;
+        @Bind(R.id.imgMedia)    ImageView imgMedia;
         private View view;
         public ViewHolder(View itemView) {
             super(itemView);

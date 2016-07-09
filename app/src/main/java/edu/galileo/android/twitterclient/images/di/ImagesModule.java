@@ -31,6 +31,7 @@ import edu.galileo.android.twitterclient.lib.base.ImageLoader;
 /**
  * Created by Hiro on 09/07/2016.
  */
+@Module
 public class ImagesModule {
     private ImagesView view;
     private OnItemClickListener clickListener;

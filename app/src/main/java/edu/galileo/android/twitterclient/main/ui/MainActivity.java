@@ -42,9 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment[] fragments = new Fragment[]{new ImagesFragment(), new HashtagsFragment()};
         String[] titles = new String[]{getString(R.string.main_header_images),getString(R.string.main_header_hashtags)};
         MainSectionPagerAdapter adapter =
-                new MainSectionPagerAdapter(getSupportFragmentManager(),
-                                            titles,
-                                            fragments);
+                new MainSectionPagerAdapter(getSupportFragmentManager(), titles, fragments);
         viewPager.setAdapter(adapter);
         tabs.setupWithViewPager(viewPager);
     }
