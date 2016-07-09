@@ -4,4 +4,8 @@
     <string name="main.header.images">Imágenes</string>
     <string name="main.header.hashtags">Hashtags</string>
     <string name="main.menu.action.logout">Cerrar sesión</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_images_fragment">This is images fragment</string>
+    <string name="hello_hashtags_fragment">This is hashtags fragment</string>
 </resources>
