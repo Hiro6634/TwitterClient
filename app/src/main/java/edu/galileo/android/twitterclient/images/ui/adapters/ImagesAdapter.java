@@ -25,6 +25,12 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
     private ImageLoader imageLoader;
     private OnItemClickListener clickListener;
 
+    public ImagesAdapter(List<Image> dataset, ImageLoader imageLoader, OnItemClickListener clickListener) {
+        this.dataset = dataset;
+        this.imageLoader = imageLoader;
+        this.clickListener = clickListener;
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_images, parent, false);
