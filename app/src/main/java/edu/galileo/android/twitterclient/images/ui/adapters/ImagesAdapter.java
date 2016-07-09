@@ -39,7 +39,7 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
         imageLoader.load(holder.imgMedia, imageTweet.getImageURL());
     }
 
-    private void setItems(Collection newItems){
+    public void setItems(Collection newItems){
         dataset.addAll(newItems);
     }
 
