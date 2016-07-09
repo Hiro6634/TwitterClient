@@ -16,7 +16,7 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import edu.galileo.android.twitterclient.main.MainActivity;
+import edu.galileo.android.twitterclient.main.ui.MainActivity;
 import io.fabric.sdk.android.Fabric;
 
 public class LoginActivity extends AppCompatActivity {
