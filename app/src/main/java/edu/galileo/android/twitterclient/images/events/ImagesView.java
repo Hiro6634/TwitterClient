@@ -1,8 +1,8 @@
-package edu.galileo.android.twitterclient.images;
+package edu.galileo.android.twitterclient.images.events;
 
 import java.util.List;
 
-import edu.galileo.android.twitterclient.entities.Images;
+import edu.galileo.android.twitterclient.entities.Image;
 
 /**
  * Created by Hiro on 09/07/2016.
@@ -14,6 +14,6 @@ public interface ImagesView  {
     void hideProgress();
 
     void onError(String error);
-    void setContent(List<Images> items);
+    void setContent(List<Image> items);
 
 }
