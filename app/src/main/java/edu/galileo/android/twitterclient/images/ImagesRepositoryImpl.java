@@ -8,6 +8,7 @@ import com.twitter.sdk.android.core.models.Tweet;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class ImagesRepositoryImpl implements ImagesRepository {
                         String tweetText = tweet.text;
                         int index = tweetText.indexOf("http");
                         if(index > 0){
-                            tweetText = tweetText.substring(0. index);
+                            tweetText = tweetText.substring(0, index);
                         }
                         tweetModel.setTweetText(tweetText);
 
@@ -58,7 +59,7 @@ public class ImagesRepositoryImpl implements ImagesRepository {
                     }
                 }
 
-                Collection.sort(items, new Comparator<Image>(){
+                Collections.sort(items, new Comparator<Image>(){
 
                     @Override
                     public int compare(Image image, Image t1) {
@@ -71,7 +72,7 @@ public class ImagesRepositoryImpl implements ImagesRepository {
 
             @Override
             public void failure(TwitterException e) {
-                post(e.getLocalizedMessage())
+                post(e.getLocalizedMessage());
             }
         };
         client.getTimeLineService().homeTimeLine(TWEET_COUNT, true, true, true, true, callback);
