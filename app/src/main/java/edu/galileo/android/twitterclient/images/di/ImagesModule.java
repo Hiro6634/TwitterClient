@@ -1,6 +1,5 @@
 package edu.galileo.android.twitterclient.images.di;
 
-import android.widget.ImageView;
 
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.Session;
@@ -23,7 +22,7 @@ import edu.galileo.android.twitterclient.images.ImagesPresenter;
 import edu.galileo.android.twitterclient.images.ImagesPresenterImpl;
 import edu.galileo.android.twitterclient.images.ImagesRepository;
 import edu.galileo.android.twitterclient.images.ImagesRepositoryImpl;
-import edu.galileo.android.twitterclient.images.events.ImagesView;
+import edu.galileo.android.twitterclient.images.ui.ImagesView;
 import edu.galileo.android.twitterclient.images.ui.adapters.ImagesAdapter;
 import edu.galileo.android.twitterclient.images.ui.adapters.OnItemClickListener;
 import edu.galileo.android.twitterclient.lib.base.ImageLoader;

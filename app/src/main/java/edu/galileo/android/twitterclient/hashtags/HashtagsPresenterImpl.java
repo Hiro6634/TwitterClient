@@ -1,20 +1,20 @@
-package edu.galileo.android.twitterclient.images;
+package edu.galileo.android.twitterclient.hashtags;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
-import edu.galileo.android.twitterclient.images.events.ImagesEvent;
-import edu.galileo.android.twitterclient.images.ui.ImagesView;
+import edu.galileo.android.twitterclient.hashtags.events.HashtagsEvent;
+import edu.galileo.android.twitterclient.hashtags.ui.HashtagsView;
+import edu.galileo.android.twitterclient.lib.base.EventBus;
 
 /**
  * Created by Hiro on 09/07/2016.
  */
-public class ImagesPresenterImpl implements ImagesPresenter {
+public class HashtagsPresenterImpl implements HashtagsPresenter {
     private EventBus eventBus;
-    private ImagesView view;
-    private ImagesInteractor interactor;
+    private HashtagsView view;
+    private HashtagsInteractor interactor;
 
-    public ImagesPresenterImpl(EventBus eventBus, ImagesView view, ImagesInteractor interactor) {
+    public HashtagsPresenterImpl(EventBus eventBus, HashtagsView view, HashtagsInteractor interactor) {
         this.eventBus = eventBus;
         this.view = view;
         this.interactor = interactor;
@@ -36,9 +36,9 @@ public class ImagesPresenterImpl implements ImagesPresenter {
     }
 
     @Override
-    public void getImageTweets() {
-        if( view != null){
-            view.hideImages();
+    public void getHashtagsTweets() {
+        if(view != null){
+            view.hideHashtags();
             view.showProgress();
         }
         interactor.execute();
@@ -46,19 +46,17 @@ public class ImagesPresenterImpl implements ImagesPresenter {
 
     @Override
     @Subscribe
-    public void onEventMainThread(ImagesEvent event) {
+    public void onEventMainThread(HashtagsEvent event) {
         String errorMsg = event.getError();
         if( view != null){
-            view.showImages();
+            view.showHashtags();
             view.hideProgress();
         }
-
-        if(errorMsg != null){
+        if(errorMsg!=null){
             view.onError(errorMsg);
         }
         else{
-            view.setContent(event.getImages());
+            view.setContent(event.getHashtags());
         }
-
     }
 }

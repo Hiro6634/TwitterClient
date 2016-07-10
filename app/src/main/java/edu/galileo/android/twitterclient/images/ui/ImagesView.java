@@ -1,4 +1,4 @@
-package edu.galileo.android.twitterclient.images.events;
+package edu.galileo.android.twitterclient.images.ui;
 
 import java.util.List;
 
